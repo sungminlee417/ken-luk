@@ -9,7 +9,12 @@ export const authorQuery = groq`
     email,
     instagram,
     youtube,
-    image
+    image,
+    education,
+    organizations,
+    teachingPositions,
+    musicalGroups,
+    achievements
   }
 `
 
@@ -20,6 +25,7 @@ export const recordingsQuery = groq`
     artist,
     releaseDate,
     description,
+    recordingType,
     bandcampUrl,
     spotifyUrl,
     appleMusicUrl,
@@ -84,6 +90,7 @@ export const siteSettingsQuery = groq`
     _id,
     title,
     description,
+    homepageSubtitle,
     keywords,
     author->{
       name,
@@ -93,5 +100,33 @@ export const siteSettingsQuery = groq`
     },
     mainNavigation,
     socialLinks
+  }
+`
+
+export const siteInfoQuery = groq`
+  *[_type == "siteInfo" && slug.current == "about-site"][0] {
+    _id,
+    title,
+    slug,
+    purpose,
+    content
+  }
+`
+
+export const contactInfoQuery = groq`
+  *[_type == "contactInfo"][0] {
+    _id,
+    title,
+    subtitle,
+    email,
+    instagram,
+    instagramUrl,
+    youtube,
+    youtubeUrl,
+    contactFormTitle,
+    formSubjects,
+    bookingInfoTitle,
+    bookingInfoDescription,
+    bookingRequirements
   }
 `

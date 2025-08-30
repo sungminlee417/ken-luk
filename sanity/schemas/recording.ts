@@ -48,6 +48,20 @@ export default defineType({
       type: 'text',
     }),
     defineField({
+      name: 'recordingType',
+      title: 'Recording Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Video', value: 'video' },
+          { title: 'Album', value: 'album' },
+          { title: 'Single', value: 'single' },
+          { title: 'EP', value: 'ep' },
+        ],
+      },
+      initialValue: 'video',
+    }),
+    defineField({
       name: 'bandcampUrl',
       title: 'Bandcamp URL',
       type: 'url',

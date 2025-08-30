@@ -82,6 +82,116 @@ export default defineType({
       title: 'YouTube Channel ID',
       type: 'string',
     }),
+    defineField({
+      name: 'education',
+      title: 'Education',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'degree',
+            title: 'Degree',
+            type: 'string',
+          },
+          {
+            name: 'institution',
+            title: 'Institution',
+            type: 'string',
+          },
+          {
+            name: 'details',
+            title: 'Additional Details',
+            type: 'string',
+          }
+        ]
+      }]
+    }),
+    defineField({
+      name: 'organizations',
+      title: 'Organizations',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'role',
+            title: 'Role',
+            type: 'string',
+          },
+          {
+            name: 'organization',
+            title: 'Organization',
+            type: 'string',
+          }
+        ]
+      }]
+    }),
+    defineField({
+      name: 'teachingPositions',
+      title: 'Teaching Positions',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'subject',
+            title: 'Subject',
+            type: 'string',
+          },
+          {
+            name: 'institution',
+            title: 'Institution',
+            type: 'string',
+          }
+        ]
+      }]
+    }),
+    defineField({
+      name: 'musicalGroups',
+      title: 'Musical Groups',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'group',
+            title: 'Group Name',
+            type: 'string',
+          },
+          {
+            name: 'role',
+            title: 'Role (optional)',
+            type: 'string',
+          }
+        ]
+      }]
+    }),
+    defineField({
+      name: 'achievements',
+      title: 'Achievements',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'title',
+            title: 'Achievement',
+            type: 'string',
+          },
+          {
+            name: 'year',
+            title: 'Year',
+            type: 'string',
+          },
+          {
+            name: 'description',
+            title: 'Description (optional)',
+            type: 'text',
+          }
+        ]
+      }]
+    }),
   ],
   preview: {
     select: {

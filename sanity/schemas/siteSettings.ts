@@ -17,6 +17,13 @@ export default defineType({
       type: 'text',
     }),
     defineField({
+      name: 'homepageSubtitle',
+      title: 'Homepage Subtitle',
+      type: 'text',
+      description: 'The subtitle that appears below the main hero text on the homepage',
+      rows: 3,
+    }),
+    defineField({
       name: 'keywords',
       title: 'SEO Keywords',
       type: 'array',

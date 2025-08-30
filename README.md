@@ -53,16 +53,25 @@ Access the Sanity Studio at [http://localhost:3001/studio](http://localhost:3001
 ken-luk/
 ├── src/
 │   ├── app/
-│   │   ├── about/          # About page
-│   │   ├── blog/           # Blog listing and posts
-│   │   ├── contact/        # Contact page
-│   │   ├── recordings/     # Recordings catalog
-│   │   ├── studio/         # Sanity Studio
+│   │   ├── (main)/         # Main site pages
+│   │   │   ├── about/      # About page
+│   │   │   ├── about-site/ # About this site page
+│   │   │   ├── blog/       # Blog listing and posts
+│   │   │   ├── contact/    # Contact page
+│   │   │   ├── recordings/ # Recordings catalog
+│   │   │   ├── layout.tsx  # Main site layout
+│   │   │   └── page.tsx    # Homepage
+│   │   ├── (studio)/       # Studio CMS
+│   │   │   ├── studio/     # Sanity Studio
+│   │   │   └── layout.tsx  # Studio layout
 │   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Homepage
+│   │   └── not-found.tsx   # 404 error page
 │   └── components/
 │       ├── Header.tsx      # Navigation header
-│       └── Footer.tsx      # Site footer
+│       ├── Footer.tsx      # Site footer
+│       ├── ThemeProvider.tsx # Theme context
+│       ├── ThemeToggle.tsx # Dark/light mode toggle
+│       └── PortableText.tsx # Sanity content renderer
 ├── sanity/
 │   ├── schemas/           # Content schemas
 │   └── lib/              # Sanity client config
@@ -115,7 +124,6 @@ The site can be deployed to any platform that supports Next.js:
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
-- `npm run lint` - Run ESLint
 
 ### Adding New Pages
 
