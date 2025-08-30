@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ken Luk Music Website
+
+A modern, responsive website for Ken Luk - Classical Guitarist and Mandolinist, built with Next.js 15 and Sanity CMS.
+
+## Features
+
+- **Modern Design**: Clean, professional layout with responsive design
+- **Content Management**: Sanity CMS integration for easy content updates
+- **Blog System**: Full-featured blog with categories and archives
+- **Recordings Catalog**: Comprehensive discography with upcoming releases
+- **Contact Form**: Easy-to-use contact system
+- **SEO Optimized**: Built-in SEO best practices
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **CMS**: Sanity v3
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables (already configured in `.env.local`)
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3001](http://localhost:3001) in your browser
+
+### Sanity Studio
+
+Access the Sanity Studio at [http://localhost:3001/studio](http://localhost:3001/studio) to manage content.
+
+## Project Structure
+
+```
+ken-luk/
+├── src/
+│   ├── app/
+│   │   ├── about/          # About page
+│   │   ├── blog/           # Blog listing and posts
+│   │   ├── contact/        # Contact page
+│   │   ├── recordings/     # Recordings catalog
+│   │   ├── studio/         # Sanity Studio
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Homepage
+│   └── components/
+│       ├── Header.tsx      # Navigation header
+│       └── Footer.tsx      # Site footer
+├── sanity/
+│   ├── schemas/           # Content schemas
+│   └── lib/              # Sanity client config
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content Management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Adding Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Go to `/studio` 
+2. Log in with your Sanity account
+3. Create and manage:
+   - Blog posts
+   - Recordings
+   - Pages
+   - Author information
+   - Site settings
 
-## Learn More
+### Content Types
 
-To learn more about Next.js, take a look at the following resources:
+- **Posts**: Blog posts with categories, images, and rich text
+- **Recordings**: Album information with links to streaming platforms
+- **Pages**: Static pages with flexible content
+- **Categories**: Blog post categories
+- **Author**: Author profile and contact information
+- **Site Settings**: Global site configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (Recommended)
 
-## Deploy on Vercel
+1. Push to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- Self-hosted
+
+## Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+### Adding New Pages
+
+1. Create a new folder in `src/app/`
+2. Add a `page.tsx` file
+3. Update navigation in `Header.tsx`
+
+### Styling
+
+The project uses Tailwind CSS for styling. Customize the theme in `tailwind.config.js`.
+
+## Migrated Content
+
+This website modernizes Ken Luk's original WordPress blog with the following improvements:
+
+- **Homepage**: Hero section with featured recordings and recent blog posts
+- **About**: Professional biography and musical journey
+- **Recordings**: Complete discography with upcoming releases
+- **Blog**: All major posts migrated with proper categorization
+- **Contact**: Modern contact form with social links
+
+## License
+
+© 2024 Ken Luk Music. All rights reserved.
+# ken-luk
